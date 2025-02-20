@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(128, 128, 128, 0.5);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: black;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.keys button {
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 2.5rem;
+    padding: 12px 20px;
+    background-color: hsl(39, 100%, 50%);
+    text-shadow: 0 0 3px white;
+    transition: 0.5s ease;
+}
+
+.keys button:hover{
+    box-shadow: 0px 0px 10px yellow;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    transition: 0.5s ease;
+    background-color: hsl(39, 100%, 55%);
+}
+
+.keys button:active{
+    background-color: hsl(39, 100%, 60%);
+    box-shadow: 0px 0px 15px yellow;
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
+    transition: 0.5s ease;
+}
+
+.keys .operator {
+    background-color: hsl(69, 100%, 50%);
+}
+
+.keys .operator:hover{
+    background-color: hsl(69, 100%, 55%);
+}
+
+.keys .operator:active{
+    background-color: hsl(69, 100%, 60%);
+}
+
+.input {
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    padding-right: 38px;
+    font-size: 1.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.4s ease;
+}
+
+
+*::selection{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.display {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+#icon {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    transform: scale(1.5);
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 400px) {
+    .container {
+        transform: scale(0.9);
+        width: 90vmin;
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+};
+
+@media (max-width: 600px) {
+    .container {
+        transform: scale(0.9);
+        width: 90vmin;
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+};
